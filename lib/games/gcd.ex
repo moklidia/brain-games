@@ -1,7 +1,7 @@
 defmodule Games.Gcd do
   require Integer
 
-  def play() do
+  def get_game_data() do
     num1 = :rand.uniform(50)
     num2 = :rand.uniform(50)
     question = "#{num1}, #{num2}"
@@ -14,6 +14,6 @@ defmodule Games.Gcd do
   end
   
   def get_task() do
-  	IO.puts("What is the result of the expression?")
+  	IO.puts("What is the greatest common divisor of given numbers?")
   end
 end

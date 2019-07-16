@@ -1,5 +1,5 @@
 defmodule Games.Prime do
-  def play() do
+  def get_game_data() do
     question = :rand.uniform(100)
     correct_answer = if is_prime(_counter = 2, question), do: "yes", else: "no"
     make_game_data(question, correct_answer)
@@ -10,7 +10,7 @@ defmodule Games.Prime do
   end
   
   def get_task() do
-  	IO.puts("Answer 'yes' if number is prime otherwise answer 'no'.")
+  	IO.puts("Answer \'yes\' if number is prime otherwise answer \'no\'.")
   end
 
   defp is_prime(_counter, num) when num < 2 do

@@ -1,6 +1,6 @@
 defmodule Games.Calc do
 
-  def play() do
+  def get_game_data() do
     num1 = :rand.uniform(30)
     num2 = :rand.uniform(30)
     operators = ["+", "-", "*"]
@@ -19,6 +19,6 @@ defmodule Games.Calc do
   end
   
   def get_task() do
-  	IO.puts("Find the greatest common divisor of given numbers")
+  	IO.puts("What's the result of the expression?")
   end
 end
