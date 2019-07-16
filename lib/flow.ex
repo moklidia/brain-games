@@ -5,27 +5,27 @@ defmodule Flow do
     IO.puts("#{task}")
     user_name = ExPrompt.string("May I have your name? ")
     IO.puts("Hello " <> user_name)
-    roundsCount = 3
-    playRound(roundsCount, module_name, user_name)
+    rounds_count = 3
+    play_round(rounds_count, module_name, user_name)
   end
 
-  def playRound(roundsCount, module_name, user_name) when roundsCount > 0 do
+  def play_round(rounds_count, module_name, user_name) when rounds_count > 0 do
     game_data = apply(module_name, :play, [])
     question = elem(game_data, 0)
-    correctAnswer = elem(game_data, 1)
-    userAnswer = ExPrompt.string("#{question} ")
+    correct_answer = elem(game_data, 1)
+    user_answer = ExPrompt.string("#{question} ")
 
     cond do
-      userAnswer === correctAnswer ->
+      user_answer === correct_answer ->
         IO.puts("Correct!")
-        playRound(roundsCount - 1, module_name, user_name)
+        play_round(rounds_count - 1, module_name, user_name)
 
-      userAnswer !== correctAnswer ->
-        IO.puts("#{userAnswer} is wrong answer ;(. Correct answer was #{correctAnswer}.")
+      user_answer !== correct_answer ->
+        IO.puts("#{user_answer} is wrong answer ;(. Correct answer was #{correct_answer}.")
     end
   end
 
-  def playRound(roundsCount, module_name, user_name) do
+  def play_round(rounds_count, module_name, user_name) do
   	IO.puts("Congratulations, #{user_name}")
   end
 end

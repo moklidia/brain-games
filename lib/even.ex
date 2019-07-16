@@ -1,13 +1,12 @@
 defmodule Even do
   def play() do
     question = :rand.uniform(100)
-    correctAnswer = if even?(question), do: "yes", else: "no"
-     # возвращает кортеж с параметрами игры
-     make_game_data(question, correctAnswer)
+    correct_answer = if even?(question), do: "yes", else: "no"
+    make_game_data(question, correct_answer)
   end
-
-  def make_game_data(question, correctAnswer) do
-    {question, correctAnswer}
+  # возвращает кортеж с параметрами игры
+  def make_game_data(question, correct_answer) do
+    {question, correct_answer}
   end
   
   def get_task() do
