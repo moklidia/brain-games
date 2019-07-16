@@ -11,6 +11,6 @@ defmodule Games.Even do
   end
   
   def get_task() do
-  	IO.puts("Answer 'yes' if number even otherwise answer 'no'.")
+  	IO.puts("Answer 'yes' if number is even otherwise answer 'no'.")
   end
 end

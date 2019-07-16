@@ -27,7 +27,7 @@ defmodule Flow do
     end
   end
 
-  defp play_round(rounds_count, module_name, user_name) do
+  defp play_round(_rounds_count, _module_name, user_name) do
   	IO.puts("Congratulations, #{user_name}")
   end
 end
