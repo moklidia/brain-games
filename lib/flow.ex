@@ -1,6 +1,6 @@
 defmodule Flow do
   def play_game(game_name) do
-  	module_name = String.to_existing_atom("Elixir."<>game_name)
+  	module_name = String.to_existing_atom("Elixir."<>"Games."<>game_name)
   	task = apply(module_name, :get_task, [])
     IO.puts("#{task}")
     user_name = ExPrompt.string("May I have your name? ")
@@ -9,7 +9,7 @@ defmodule Flow do
     play_round(rounds_count, module_name, user_name)
   end
 
-  def play_round(rounds_count, module_name, user_name) when rounds_count > 0 do
+  defp play_round(rounds_count, module_name, user_name) when rounds_count > 0 do
     game_data = apply(module_name, :play, [])
     question = elem(game_data, 0)
     correct_answer = elem(game_data, 1)
@@ -25,7 +25,7 @@ defmodule Flow do
     end
   end
 
-  def play_round(rounds_count, module_name, user_name) do
+  defp play_round(rounds_count, module_name, user_name) do
   	IO.puts("Congratulations, #{user_name}")
   end
 end
