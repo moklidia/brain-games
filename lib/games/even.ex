@@ -5,7 +5,7 @@ defmodule Games.Even do
     correct_answer = if Integer.is_even(question), do: "yes", else: "no"
     make_game_data(question, correct_answer)
   end
-  # возвращает кортеж с параметрами игры
+  # returns a tuple with game params
   defp make_game_data(question, correct_answer) do
     {question, correct_answer}
   end

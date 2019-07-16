@@ -13,7 +13,7 @@ defmodule Games.Calc do
     end
     make_game_data(question, "#{correct_answer}")
   end
-  # возвращает кортеж с параметрами игры
+  # returns a tuple with game params
   defp make_game_data(question, correct_answer) do
     {question, correct_answer}
   end

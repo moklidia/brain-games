@@ -1,4 +1,5 @@
 defmodule Flow do
+  #outputs the task, greets the user, and starts rounds
   def play_game(game_name) do
   	module_name = String.to_existing_atom("Elixir."<>"Games."<>game_name)
   	task = apply(module_name, :get_task, [])
@@ -9,6 +10,7 @@ defmodule Flow do
     play_round(rounds_count, module_name, user_name)
   end
 
+  #outputs the question and compares the user's answer to the correct answer
   defp play_round(rounds_count, module_name, user_name) when rounds_count > 0 do
     game_data = apply(module_name, :play, [])
     question = elem(game_data, 0)
