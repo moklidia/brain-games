@@ -1,7 +1,7 @@
 defmodule Games.Gcd do
   require Integer
 
-  def get_game_data() do
+  def generate_game_data() do
     num1 = :rand.uniform(50)
     num2 = :rand.uniform(50)
     question = "#{num1}, #{num2}"

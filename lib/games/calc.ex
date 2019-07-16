@@ -1,6 +1,6 @@
 defmodule Games.Calc do
 
-  def get_game_data() do
+  def generate_game_data() do
     num1 = :rand.uniform(30)
     num2 = :rand.uniform(30)
     operators = ["+", "-", "*"]

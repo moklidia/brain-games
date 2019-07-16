@@ -11,7 +11,7 @@ defmodule GameFlow do
 
   #retrieves the game data, outputs the question and compares the user's answer to the correct answer
   defp play_round(rounds_count, module_name, user_name) when rounds_count > 0 do
-    game_data = apply(module_name, :get_game_data, [])
+    game_data = apply(module_name, :generate_game_data, [])
     question = elem(game_data, 0)
     correct_answer = elem(game_data, 1)
     user_answer = ExPrompt.string("#{question} ")

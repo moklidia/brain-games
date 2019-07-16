@@ -1,6 +1,6 @@
 defmodule Games.Even do
 	  require Integer
-  def get_game_data() do
+  def generate_game_data() do
     question = :rand.uniform(100)
     correct_answer = if Integer.is_even(question), do: "yes", else: "no"
     make_game_data(question, correct_answer)

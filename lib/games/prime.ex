@@ -1,5 +1,5 @@
 defmodule Games.Prime do
-  def get_game_data() do
+  def generate_game_data() do
     question = :rand.uniform(100)
     correct_answer = if is_prime(_counter = 2, question), do: "yes", else: "no"
     make_game_data(question, correct_answer)
