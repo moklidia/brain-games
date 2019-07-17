@@ -8,8 +8,9 @@ defmodule Dispatcher do
   		  2. Brain-calc
   		  3. Brain-gcd 
   		  4. Brain-prime
+        5. Brain-progression
   		"""
-  		)
+  	)
   	answer = IO.gets("Enter the game number > ")
   	value = String.first(answer)
 	game_name = char_to_game_name(value)
@@ -23,6 +24,7 @@ defmodule Dispatcher do
   		"2" -> "Calc"
   		"3" -> "Gcd"
   		"4" -> "Prime"
+      "5" -> "Progression"
   	end
   end
 end
