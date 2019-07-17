@@ -4,11 +4,12 @@ defmodule Dispatcher do
   	IO.puts(
   		"""
   		Choose a game:
-  		  1. Brain-even 
-  		  2. Brain-calc
-  		  3. Brain-gcd 
-  		  4. Brain-prime
-        5. Brain-progression
+
+      1. Brain-even 
+      2. Brain-calc
+      3. Brain-gcd
+      4. Brain-prime
+      5. Brain-progression
   		"""
   	)
   	answer = IO.gets("Enter the game number > ")
@@ -21,9 +22,9 @@ defmodule Dispatcher do
   def char_to_game_name(char) do
   	case char do
   		"1" -> "Even"
-  		"2" -> "Calc"
-  		"3" -> "Gcd"
-  		"4" -> "Prime"
+      "2" -> "Calc"
+      "3" -> "Gcd"
+      "4" -> "Prime"
       "5" -> "Progression"
   	end
   end
