@@ -21,7 +21,7 @@ defmodule Dispatcher do
   # finds the corresponding game name
   def char_to_game_name(char) do
   	case char do
-  		"1" -> "Even"
+      "1" -> "Even"
       "2" -> "Calc"
       "3" -> "Gcd"
       "4" -> "Prime"
